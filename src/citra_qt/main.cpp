@@ -898,10 +898,10 @@ bool GMainWindow::LoadROM(const QString& filename) {
     const QString below_gl33_message = tr("Your GPU may not support OpenGL 3.3, or you do not "
                                           "have the latest graphics driver.");
 
-    if (!QOpenGLContext::globalShareContext()->versionFunctions<QOpenGLFunctions_3_3_Core>()) {
-        QMessageBox::critical(this, below_gl33_title, below_gl33_message);
-        return false;
-    }
+    // if (!QOpenGLContext::globalShareContext()->versionFunctions<QOpenGLFunctions_3_3_Core>()) {
+    //     QMessageBox::critical(this, below_gl33_title, below_gl33_message);
+    //     return false;
+    // }
 
     Core::System& system{Core::System::GetInstance()};
 
